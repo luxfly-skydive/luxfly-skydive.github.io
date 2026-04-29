@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Redirecting…</title>
+<script>(function(){
+var REPOS={
+  "bottarga-brothers":"https://zoomyservice.github.io/bottarga-brothers",
+  "nosmontres-website":"https://zoomyservice.github.io/nosmontres-website",
+  "indoorskydive":"https://zoomyservice.github.io/indoorskydive"
+};
+var p=location.pathname;
+for(var k in REPOS){
+  if(p.indexOf("/"+k)===0){
+    var rest=p.slice(k.length+1);
+    location.replace(REPOS[k]+(rest||"/")+location.search+location.hash);
+    return;
+  }
+}
+location.replace("https://zoomyservice.github.io/");
+})();</script>
+<meta http-equiv="refresh" content="2; url=https://zoomyservice.github.io/">
+<style>body{font-family:system-ui;text-align:center;padding:80px 20px;color:#666}</style>
+</head>
+<body><p>Redirecting…</p></body>
+</html>
